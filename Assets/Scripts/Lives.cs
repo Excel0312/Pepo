@@ -43,6 +43,14 @@ public class Lives : MonoBehaviour
         }
     }
 
+    public void AddLives(){
+        int lives = PlayerPrefs.GetInt("Lives");
+        if(lives > 0){
+            lives = lives +1;
+            PlayerPrefs.SetInt ("Lives", lives);
+        }
+    }
+
     public void Retry()
     {
         Time.timeScale = 1;
